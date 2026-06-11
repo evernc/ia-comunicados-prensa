@@ -43,3 +43,6 @@ Automatizar la creación de borradores de comunicados y notas de prensa para que
 ## Nota técnica
 
 Este prototipo simula el comportamiento de una IA mediante plantillas dinámicas en JavaScript. Para una versión real, se podría conectar a una API de inteligencia artificial.
+## Avance del Sprint 1
+
+Durante el Sprint 1 se creó una rama secundaria para evidenciar el control de versiones del proyecto. En esta rama se agregó documentación relacionada con el prototipo de IA para comunicados y notas de prensa.
