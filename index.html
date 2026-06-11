@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA Redactora de Comunicados y Notas de Prensa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Proyecto Sprint 1</p>
+      <h1>IA Redactora de Comunicados y Notas de Prensa</h1>
+      <p class="subtitle">
+        Genera borradores profesionales en segundos a partir de hechos clave.
+      </p>
+    </div>
+    <div class="status-card">
+      <span class="status-dot"></span>
+      Prototipo funcional
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel editor-panel">
+      <div class="section-title">
+        <span>01</span>
+        <h2>Datos clave</h2>
+      </div>
+
+      <div class="grid two">
+        <label>
+          Tipo de texto
+          <select id="tipoTexto">
+            <option value="comunicado">Comunicado de prensa</option>
+            <option value="nota">Nota de prensa</option>
+          </select>
+        </label>
+
+        <label>
+          Tono
+          <select id="tono">
+            <option value="institucional">Institucional</option>
+            <option value="formal">Formal</option>
+            <option value="informativo">Informativo</option>
+            <option value="urgente">Urgente</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Título o tema principal
+        <input id="titulo" type="text" placeholder="Ej. Presentación del nuevo laboratorio de innovación" />
+      </label>
+
+      <div class="grid two">
+        <label>
+          Fecha
+          <input id="fecha" type="date" />
+        </label>
+
+        <label>
+          Lugar
+          <input id="lugar" type="text" placeholder="Ej. Ciudad de México" />
+        </label>
+      </div>
+
+      <label>
+        Audiencia
+        <input id="audiencia" type="text" placeholder="Ej. comunidad estudiantil, medios de comunicación, padres de familia" />
+      </label>
+
+      <label>
+        Hechos clave
+        <textarea id="hechos" placeholder="Escribe aquí los datos importantes: qué pasó, quién participó, cuándo ocurrió, por qué es importante..."></textarea>
+      </label>
+
+      <label>
+        Cita o mensaje de autoridad
+        <textarea id="cita" placeholder="Ej. Este proyecto fortalece el aprendizaje práctico de nuestros estudiantes."></textarea>
+      </label>
+
+      <label>
+        Nombre del responsable o institución
+        <input id="responsable" type="text" placeholder="Ej. Dirección de Comunicación Institucional" />
+      </label>
+
+      <div class="actions">
+        <button class="primary" onclick="generarBorrador()">Generar borrador</button>
+        <button onclick="copiarBorrador()">Copiar texto</button>
+        <button onclick="limpiarFormulario()">Limpiar</button>
+      </div>
+    </section>
+
+    <section class="panel result-panel">
+      <div class="section-title">
+        <span>02</span>
+        <h2>Resultado de la IA</h2>
+      </div>
+
+      <div class="metrics">
+        <article>
+          <strong id="contadorPalabras">0</strong>
+          <span>palabras</span>
+        </article>
+        <article>
+          <strong id="contadorCaracteres">0</strong>
+          <span>caracteres</span>
+        </article>
+        <article>
+          <strong id="estadoRevision">Pendiente</strong>
+          <span>estado</span>
+        </article>
+      </div>
+
+      <div id="resultado" class="output">
+        <p class="placeholder">
+          El borrador aparecerá aquí. Completa los datos clave y presiona “Generar borrador”.
+        </p>
+      </div>
+
+      <div class="review-box">
+        <h3>Checklist de revisión</h3>
+        <ul>
+          <li>Verificar nombres, fechas y lugares.</li>
+          <li>Confirmar que el tono sea adecuado.</li>
+          <li>Revisar ortografía antes de publicar.</li>
+          <li>Validar que los hechos clave sean correctos.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Proyecto escolar basado en Scrum, Jira y Git. Sprint 1: prototipo de generación de borradores.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

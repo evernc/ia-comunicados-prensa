@@ -1,0 +1,2 @@
+Proyecto escolar creado para fines académicos.
+Uso permitido: presentación, práctica de Scrum, Jira, Git y prototipado web.
